@@ -15,6 +15,11 @@ public class StudentController {
     @Autowired
     StudentRepo studentRepo;
 
+    @RequestMapping("/welcome")
+    public String welcome(){
+        return "Hello there, welcome to student college";
+    }
+
     @GetMapping("/students")
     public List<Student> getAll(){
 
